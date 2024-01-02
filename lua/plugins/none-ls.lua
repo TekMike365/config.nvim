@@ -1,15 +1,16 @@
 return {
-    "nvimtools/none-ls.nvim",
-    config = function()
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                null_ls.builtins.formatting.stylua,
-                null_ls.builtins.diagnostics.rubocop,
-                null_ls.builtins.formatting.rubocop,
-            },
-        })
+	"nvimtools/none-ls.nvim",
+	config = function()
+		local null_ls = require("null-ls")
+		null_ls.setup({
+			sources = {
+				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.diagnostics.rubocop,
+				null_ls.builtins.formatting.rubocop,
+			},
+		})
 
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-    end,
+		vim.lsp.buf.format({ timeout_ms = 5000 })
+		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+	end,
 }
