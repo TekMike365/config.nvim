@@ -7,5 +7,3 @@ suit my needs
 
 [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 
-> Some random quote.
-
