@@ -14,7 +14,7 @@ local function check_config_updates()
 			local status = vim.fn.system({"git", "-C", config_path, "status", "-sb"})
 
 			if string.find(status, "behind") then
-				vim.notify("(v) Config update available! Run :GitPullConfig", vim.log.levels.WARN, {
+				vim.notify("(v) Config update available! Run :PullConfig", vim.log.levels.WARN, {
 					title = "Neovim Config",
 					icon = "(v)",
 				})
@@ -27,7 +27,7 @@ end
 vim.api.nvim_create_autocmd("VimEnter", { callback = check_config_updates })
 
 -- 3. Create a command so you can pull manually when you're ready
-vim.api.nvim_create_user_command("GitPullConfig", function()
+vim.api.nvim_create_user_command("PullConfig", function()
 	local config_path = vim.fn.stdpath("config")
 	print("Updating config...")
 	vim.fn.system({"git", "-C", config_path, "pull"})
