@@ -14,7 +14,7 @@ local function check_config_updates()
 			local status = vim.fn.system({"git", "-C", config_path, "status", "-sb"})
 
 			if string.find(status, "behind") then
-				vim.notify("(v) Config update available! Run :GitPullConfig", vim.log.levels.INFO, {
+				vim.notify("(v) Config update available! Run :GitPullConfig", vim.log.levels.WARN, {
 					title = "Neovim Config",
 					icon = "(v)",
 				})
