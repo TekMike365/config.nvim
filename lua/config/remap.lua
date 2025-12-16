@@ -34,10 +34,8 @@ vim.keymap.set("x", "<leader>pp", "\"_dP")
 -- paste from keyboard
 vim.keymap.set("x", "<C-p>", "\"+p")
 vim.keymap.set("n", "<C-p>", "\"+p")
-vim.keymap.set("i", "<C-p>", "\"+p")
 vim.keymap.set("x", "<C-P>", "\"+P")
 vim.keymap.set("n", "<C-P>", "\"+P")
-vim.keymap.set("i", "<C-P>", "\"+P")
 
 -- copy to clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
