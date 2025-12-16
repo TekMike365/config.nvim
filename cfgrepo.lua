@@ -7,6 +7,7 @@ local function check_config_updates()
 
 	-- 1. Fetch the latest info from origin in the background
 	vim.fn.jobstart({"git", "-C", config_path, "fetch"}, {
+		on_enter = function() print("Checking config repo...") end,
 		on_exit = function(_, exit_code)
 			if exit_code ~= 0 then return end -- Quit if no internet or git error
 
@@ -14,10 +15,7 @@ local function check_config_updates()
 			local status = vim.fn.system({"git", "-C", config_path, "status", "-sb"})
 
 			if string.find(status, "behind") then
-				vim.notify("(v) Config update available! Run :PullConfig", vim.log.levels.WARN, {
-					title = "Neovim Config",
-					icon = "(v)",
-				})
+				vim.notify("(v) Config update available! Run :PullConfig", vim.log.levels.WARN)
 			end
 		end,
 	})
