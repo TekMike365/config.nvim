@@ -9,10 +9,16 @@ vim.keymap.set("n", "dj", "dd")
 -- select all
 vim.keymap.set("n", "vA", "ggvG")
 
+-- wrap a paragraph
+vim.keymap.set("n", "<leader>w", "gwap")
+-- wrap selection
+vim.keymap.set("x", "<leader>w", "gw")
+
 -- comment block
 vim.keymap.set("x", "<leader>k", "gc", { remap=true })
 vim.keymap.set("n", "<leader>k", "Vgc", { remap=true })
 
+-- move highlighted text around
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
