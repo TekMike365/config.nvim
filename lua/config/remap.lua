@@ -52,3 +52,6 @@ vim.keymap.set("n", "Q", "<nop>")
 -- make executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- run make
+vim.keymap.set("n", "<leader>mk", "<cmd>!make<CR>", { silent = true })
+
