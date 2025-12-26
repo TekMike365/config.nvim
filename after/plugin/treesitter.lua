@@ -3,7 +3,5 @@ require("nvim-treesitter").setup {
 	install_dir = vim.fn.stdpath("data") .. "/site"
 }
 
-require("nvim-treesitter").install {
-	"help", "c", "c++", "python", "bash", "lua", "latex"
-}
+require("nvim-treesitter").install { "help", "c", "c++", "python", "bash", "lua" }
 

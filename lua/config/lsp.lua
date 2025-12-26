@@ -1,7 +1,6 @@
 vim.lsp.enable({
 	"clangd",
-	"pyright",
-	"texlab"
+	"pyright"
 })
 
 vim.diagnostic.config({
