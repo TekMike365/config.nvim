@@ -6,5 +6,5 @@ suit my needs
 ## Dependencies
 
 - [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
-- plus any needed LSP's and stufff
+- plus any needed LSPs and stufff
 
