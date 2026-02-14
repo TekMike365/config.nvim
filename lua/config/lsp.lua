@@ -14,7 +14,7 @@ vim.diagnostic.config({
 })
 
 -- show diagnostic at cursor in a floating window
-vim.keymap.set("n", "<leader>i", "<c-w>d")
+vim.keymap.set("n", "<leader>i", vim.diagnostic.open_float)
 
 -- Keybinds
 vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename)
