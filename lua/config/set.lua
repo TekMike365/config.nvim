@@ -11,7 +11,7 @@ vim.opt.expandtab = false -- I wanna tabs
 vim.opt.smartindent = true
 
 vim.opt.list = true
-vim.opt.listchars = 'tab:t ,nbsp:-,multispace:s    ,trail:~,eol:$,extends:>,precedes:<'
+vim.opt.listchars = 'tab:t ,nbsp:-,multispace:s   ,trail:~,eol:$,extends:>,precedes:<'
 
 vim.opt.wrap = false
 
