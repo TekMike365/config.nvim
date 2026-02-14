@@ -13,6 +13,9 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
+-- show diagnostic at cursor in a floating window
+vim.keymap.set("n", "<leader>i", "<c-w>d")
+
 -- Keybinds
 vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename)
 vim.keymap.set({"n", "x"}, "<leader>ra", vim.lsp.buf.code_action)
