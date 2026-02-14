@@ -22,3 +22,7 @@ vim.keymap.set("n", "<leader>rt", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>O", vim.lsp.buf.document_symbol)
 -- CTRL-S is mapped in Insert mode to |vim.lsp.buf.signature_help()|
 
+-- Completion
+-- (<c-x><c-o> uses vim.lsp.omnifunc, calling it doesn't work)
+vim.keymap.set("i", "<c-space>", "<c-x><c-o>")
+
