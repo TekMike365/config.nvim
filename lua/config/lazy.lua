@@ -36,3 +36,6 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
+-- LSPs
+require("config.lsp")
+
